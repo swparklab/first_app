@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { Counter1, Counter2 } from './usingHooks/onClick';
+import Clocknow from './usingHooks/ClockState1';
 import Clockstate2 from './usingHooks/ClockState2';
 import Clockstate3 from './usingHooks/ClockState3';
 
@@ -20,6 +21,7 @@ root.render(
   <React.StrictMode>
   <Counter1/>
   <Counter2/>
+  <Clocknow/>
   <Clockstate2/>
   <Clockstate3/>
 </React.StrictMode>,

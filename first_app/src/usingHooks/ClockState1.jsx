@@ -1,15 +1,22 @@
-//ClockState1
+import React,{useState} from "react";
 
-import React from "react";
+function ClockState1(props) {
+    const [time, setTime] = useState(new Date().toLocaleTimeString());
 
-function Clockstate1(props) {
+    const handleClick = () => {
+        let newTime;
+        if (time <=new Date().toLocaleTimeString()) {
+            newTime = new Date().toLocaleTimeString();
+        }
+        setTime(newTime);
+    };
 
     return (
         <div>
-            <span> 현재시각 : 1시</span>
-            <button>Update</button>
+            <span>현재시각 : {time}시</span>
+            <button onClick={handleClick}>Update</button>
         </div>
     );
-}
 
-export default Clockstate1;
+}
+export default ClockState1;
